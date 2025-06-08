@@ -51,11 +51,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Telega3.loader.js";
+      var loaderUrl = buildUrl + "/Telega2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/1b93603e6a44f9ed3fcc176de1fbcb06.data.unityweb",
-        frameworkUrl: buildUrl + "/1983524b32b93422c434006cf91c4a28.js.unityweb",
-        codeUrl: buildUrl + "/18ad961c20fe20cebaa139d52813d509.wasm.unityweb",
+        dataUrl: buildUrl + "/Telega2.data",
+        frameworkUrl: buildUrl + "/Telega2.framework.js",
+        codeUrl: buildUrl + "/Telega2.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Budgo",
         productName: "MathMerge",
@@ -99,7 +99,9 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-         
+          //fullscreenButton.onclick = () => {
+          //  unityInstance.SetFullscreen(1);
+          //};
         }).catch((message) => {
           alert(message);
         });
